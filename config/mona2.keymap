@@ -105,10 +105,10 @@
 
         Win_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R          &kp T                                                          &kp Y        &kp U    &lt 4 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F          &kp G                                  &kp F13                 &kp H        &kp J    &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &kp B        &kp TAB                   &kp GRAVE               &kp N        &lt 3 M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp BACKSPACE  &lt 6 ENTER  &lt_to_layer_0 0 LANG2    &lt_to_layer_0 0 LANG1  &lt 4 ENTER                               &to 2
+&kp Q               &kp W         &kp E         &kp R            &kp T                                                          &kp Y        &kp U    &lt 4 I    &kp O    &kp P
+&kp A               &kp S         &kp D         &kp F            &kp G                                  &kp F13                 &kp H        &kp J    &kp K      &kp L    &kp MINUS
+&mt LEFT_CONTROL Z  &kp X         &kp C         &kp V            &kp B        &kp TAB                   &kp GRAVE               &kp N        &lt 3 M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LEFT_SHIFT      &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 BACKSPACE  &lt 6 ENTER  &lt_to_layer_0 0 LANG2    &lt_to_layer_0 0 LANG1  &lt 4 ENTER                               &Macro_NUM_Muhenkan
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -178,6 +178,15 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+
+        Win_FUNCTION {
+            bindings = <
+&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                     &kp F1  &kp F2  &kp J   &kp F4  &kp F5
+&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)            &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans    &trans   &trans  &trans  &trans  &trans  &kp F11
+&trans     &trans     &trans     &trans     &trans     &trans    &trans   &trans                          &kp F12
+            >;
         };
     };
 };
