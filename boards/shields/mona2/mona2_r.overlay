@@ -18,7 +18,7 @@
         ;
 };
 
-// --- SPI / PMW3610 Driver ---
+/* --- SPI & Trackball Driver Configuration --- */
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
@@ -35,8 +35,8 @@
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         cpi = <1000>;
         
-        /* * DYA Studio で動的に変更するため、固定の invert-x / invert-y は削除します。
-         * DYA Studio 側の Mouse Settings で設定を反映させてください。
+        /* * DYA Studio 対応のため、ドライバレベルでの固定設定(invert-x等)は削除します。
+         * これらは DYA Studio の GUI からリアルタイムに設定・保存が可能になります。
          */
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -44,19 +44,40 @@
     };
 };
 
-// --- Input Listener (Runtime Input Processor 対応) ---
+/* --- Input Listener & Runtime Processors --- */
 &trackball_central_listener {
     status = "okay";
     device = <&trackball_central>;
-
-    /* 通常移動時：ランタイムプロセッサを通すことで感度や反転を GUI から制御 */
+    
+    /* 通常時のマウス移動に DYA Studio の設定を適用 */
     input-processors = <&mouse_runtime_input_processor>;
 
     /* スクロールレイヤー (Layer 4) の設定 */
     scroller {
         layers = <4>;
-        input-processors = 
-            <&zip_xy_to_scroll_mapper>,        // マウス移動をスクロールに変換
-            <&scroll_runtime_input_processor>; // スクロールの設定も GUI から制御
+        /* * zip_xy_transform や zip_scroll_scaler などの固定記述を削除し、
+         * 全て DYA Studio 経由で調整できるように runtime-input-processor を配置します。
+         */
+        input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
+    };
+};
+
+/* --- Pinctrl (SPI) --- */
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 4)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 4)>;
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 4)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 4)>;
+            low-power-enable;
+        };
     };
 };
