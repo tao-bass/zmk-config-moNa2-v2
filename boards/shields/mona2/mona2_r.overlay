@@ -1,6 +1,6 @@
 #include "mona2.dtsi"
 #include <input/processors.dtsi>
-#include <input/processors/runtime-input-processor.dtsi> // 必須
+#include <input/processors/runtime-input-processor.dtsi>
 #include <behaviors/battery_history_request.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
@@ -18,7 +18,7 @@
         ;
 };
 
-// --- SPI / PMW3610 Driver Configuration ---
+// --- SPI / PMW3610 Driver ---
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
@@ -35,8 +35,8 @@
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         cpi = <1000>;
         
-        /* * DYA Studio 対応のため、ドライバ側の固定設定(invert/swap等)は削除します。
-         * これらは DYA Studio の GUI から動的に変更可能になります。
+        /* * DYA Studio で動的に変更するため、固定の invert-x / invert-y は削除します。
+         * DYA Studio 側の Mouse Settings で設定を反映させてください。
          */
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -48,15 +48,15 @@
 &trackball_central_listener {
     status = "okay";
     device = <&trackball_central>;
-    
-    /* 通常時のマウス移動にランタイムプロセッサを適用 */
+
+    /* 通常移動時：ランタイムプロセッサを通すことで感度や反転を GUI から制御 */
     input-processors = <&mouse_runtime_input_processor>;
 
-    /* Layer 4 (スクロールレイヤー) の設定 */
+    /* スクロールレイヤー (Layer 4) の設定 */
     scroller {
         layers = <4>;
         input-processors = 
-            <&zip_xy_to_scroll_mapper>,
-            <&scroll_runtime_input_processor>; // スクロール設定を DYA Studio から変更可能に
+            <&zip_xy_to_scroll_mapper>,        // マウス移動をスクロールに変換
+            <&scroll_runtime_input_processor>; // スクロールの設定も GUI から制御
     };
 };
