@@ -21,7 +21,7 @@ manifest:
     # ZMK 本体: DYA Studio 用カスタム RPC サブシステム付きの fork を使用
     - name: zmk
       remote: cormoran
-      revision: v0.3-branch+dya
+      revision: v0.3+custom-studio-protocol
       import: app/west.yml
 
     # --- DYA Studio 必須モジュール ---
