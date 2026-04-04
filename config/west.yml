@@ -13,16 +13,16 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: zettaface  # <-- Input Processor Keybind
       url-base: https://github.com/zettaface
-    # DYA Studio / Cormoran 用のリモート
     - name: cormoran
       url-base: https://github.com/cormoran
 
   projects:
-    # ZMK 本体: DYA Studio 用カスタム RPC サブシステム付きの fork を使用
+    # ZMK 本体: Studio プロトコル対応のカスタムリビジョンを使用
     - name: zmk
       remote: cormoran
       revision: v0.3+custom-studio-protocol
-      import: app/west.yml
+      import:
+        file: app/west.yml
 
     # --- DYA Studio 必須モジュール ---
     - name: zmk-module-ble-management
@@ -37,9 +37,6 @@ manifest:
     - name: zmk-module-runtime-input-processor
       remote: cormoran
       revision: main
-      - name: zmk-behavior-runtime-sensor-rotate
-      remote: cormoran
-      revision: main
 
     # --- 既存のモジュール ---
     - name: zmk-pmw3610-driver
@@ -50,6 +47,11 @@ manifest:
       revision: v0.3
     - name: zmk-input-processor-keybind
       remote: zettaface
+      revision: main
+
+    # --- 追加のモジュール ---
+    - name: zmk-behavior-runtime-sensor-rotate
+      remote: cormoran
       revision: main
 
   self:
