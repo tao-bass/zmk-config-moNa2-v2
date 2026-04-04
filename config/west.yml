@@ -20,7 +20,7 @@ manifest:
     # ZMK 本体
     - name: zmk
       remote: cormoran
-      revision: v0.3-branch+custom-studio-protocol+ble
+      revision: v0.3+custom-studio-protocol
       import:
         file: app/west.yml
 
