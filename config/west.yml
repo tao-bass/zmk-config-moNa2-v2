@@ -20,7 +20,7 @@ manifest:
     # ZMK 本体: Studio プロトコル対応のカスタムリビジョンを使用
     - name: zmk
       remote: cormoran
-      revision: v0.3+custom-studio-protocol
+      revision: v0.3-branch+dya
       import:
         file: app/west.yml
 
