@@ -6,7 +6,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <behaviors/runtime-sensor-rotate.dtsi>t
+#include <behaviors/runtime-sensor-rotate.dtsi>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 #define MOUSE 5
@@ -77,6 +77,14 @@
             tapping-term-ms = <200>;
         };
 
+        rsr_vol: rsr_vol {
+            compatible = "zmk,behavior-runtime-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            tap-ms = <5>;
+            cw-binding = <&kp C_VOL_UP>;   // 時計回りのデフォルト
+            ccw-binding = <&kp C_VOL_DN>;  // 反時計回りのデフォルト
+        };
+
         scroll_up_down: mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -84,28 +92,6 @@
 
             tap-ms = <20>;
         };
-
-        rsr_vol: rsr_vol {
-            compatible = "zmk,behavior-runtime-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            tap-ms = <5>;
-            cw-binding = <&kp C_VOL_UP>;
-            ccw-binding = <&kp C_VOL_DN>;
-        };
-
-        rsr_lr: rsr_lr {
-			compatible = "zmk,behavior-runtime-sensor-rotate";
-			#sensor-binding-cells = <0>;
-			tap-ms = <5>;
-			cw-binding = <&kp RIGHT>;
-			ccw-binding = <&kp LEFT>;
-		};
-        rsr_ud: rsr_ud {
-			compatible = "zmk,behavior-runtime-sensor-rotate";
-			#sensor-binding-cells = <0>;
-			tap-ms = <5>;
-			cw-binding = <&kp DOWN>;
-			ccw-binding = <&kp UP>;
 
         scroll_right_left: mouse_wheel_right_left {
             compatible = "zmk,behavior-sensor-rotate";
@@ -178,7 +164,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                    &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&rsr_vol>;
         };
 
         MOUSE {
