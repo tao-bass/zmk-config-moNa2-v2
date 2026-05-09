@@ -43,227 +43,7 @@ layers:
   - {t: '&to_layer_0 LANG2', h: Win}
   - '&Behavior_Henkan_Muhenkan'
   - {t: ENTER, h: '6'}
-  - '&Macro_Win_NUM'
-  Win_Num:
-  - F9
-  - KP 7
-  - KP 8
-  - KP 9
-  - '5'
-  - F9
-  - KP 7
-  - {t: KP 8, h: '6'}
-  - KP 9
-  - Sft+-
-  - {t: ▽, type: trans}
-  - KP 4
-  - KP 5
-  - KP 6
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mmv MOVE_UP'
-  - KP SLASH
-  - KP 4
-  - KP 5
-  - KP 6
-  - BACKSPACE
-  - KP 0
-  - KP 1
-  - KP 2
-  - KP 3
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mmv MOVE_DOWN'
-  - KP 0
-  - KP 1
-  - KP 2
-  - KP 3
-  - .
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - SPACE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Win_FUNCTION:
-  - Ctl+Q
-  - Ctl+W
-  - Ctl+E
-  - Ctl+R
-  - Ctl+T
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - Ctl+A
-  - Ctl+S
-  - Ctl+D
-  - Ctl+F
-  - Ctl+G
-  - {t: ▽, type: trans}
-  - F13
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - Ctl+B
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F11
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F12
-  Mac:
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - {t: I, h: '6'}
-  - O
-  - P
-  - A
-  - S
-  - D
-  - F
-  - G
-  - Sft+Gui+S
-  - F13
-  - H
-  - J
-  - K
-  - L
-  - '-'
-  - {t: Z, h: LEFT CONTROL}
-  - X
-  - C
-  - V
-  - B
-  - TAB
-  - '`'
-  - N
-  - {t: M, h: BT}
-  - ','
-  - .
-  - /
-  - LEFT SHIFT
-  - LEFT WIN
-  - LEFT ALT
-  - {t: BACKSPACE, h: Win_FUNCTION}
-  - {t: SPACE, h: arrow}
-  - {t: '&to_layer_0 LANG2', h: Win}
-  - '&Behavior_Kana_ENG'
-  - {t: ENTER, h: '6'}
-  - '&Macro_Mac_NUM'
-  Mac_Num:
-  - F9
-  - KP 7
-  - KP 8
-  - KP 9
-  - '5'
-  - F9
-  - KP 7
-  - {t: KP 8, h: '6'}
-  - KP 9
-  - Sft+-
-  - {t: ▽, type: trans}
-  - KP 4
-  - KP 5
-  - KP 6
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mmv MOVE_UP'
-  - KP SLASH
-  - KP 4
-  - KP 5
-  - KP 6
-  - BACKSPACE
-  - KP 0
-  - KP 1
-  - KP 2
-  - KP 3
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mmv MOVE_DOWN'
-  - KP 0
-  - KP 1
-  - KP 2
-  - KP 3
-  - .
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - SPACE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Mac_FUNCTION:
-  - Gui+Q
-  - Gui+W
-  - Gui+E
-  - Gui+R
-  - Gui+T
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - Gui+A
-  - Gui+S
-  - Gui+D
-  - Gui+F
-  - Gui+G
-  - {t: ▽, type: trans}
-  - F13
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - Gui+Z
-  - Gui+X
-  - Gui+C
-  - Gui+V
-  - Gui+B
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F11
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F12
+  - '&Macro_NUM_Muhenkan'
   Kigou:
   - '!'
   - '@'
@@ -304,6 +84,50 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Win_Num:
+  - F9
+  - KP 7
+  - KP 8
+  - KP 9
+  - '5'
+  - F9
+  - KP 7
+  - {t: KP 8, h: '6'}
+  - KP 9
+  - Sft+-
+  - {t: ▽, type: trans}
+  - KP 4
+  - KP 5
+  - KP 6
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mmv MOVE_UP'
+  - KP SLASH
+  - KP 4
+  - KP 5
+  - KP 6
+  - BACKSPACE
+  - KP 0
+  - KP 1
+  - KP 2
+  - KP 3
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mmv MOVE_DOWN'
+  - KP 0
+  - KP 1
+  - KP 2
+  - KP 3
+  - .
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - SPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -484,6 +308,182 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  Win_FUNCTION:
+  - Ctl+Q
+  - Ctl+W
+  - Ctl+E
+  - Ctl+R
+  - Ctl+T
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - Ctl+A
+  - Ctl+S
+  - Ctl+D
+  - Ctl+F
+  - Ctl+G
+  - {t: ▽, type: trans}
+  - F13
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - Ctl+B
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F11
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F12
+  Mac:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - {t: I, h: '6'}
+  - O
+  - P
+  - A
+  - S
+  - D
+  - F
+  - G
+  - Sft+Gui+S
+  - F13
+  - H
+  - J
+  - K
+  - L
+  - '-'
+  - {t: Z, h: LEFT CONTROL}
+  - X
+  - C
+  - V
+  - B
+  - TAB
+  - '`'
+  - N
+  - {t: M, h: Win_FUNCTION}
+  - ','
+  - .
+  - /
+  - LEFT SHIFT
+  - LEFT WIN
+  - LEFT ALT
+  - {t: BACKSPACE, h: Win_Num}
+  - {t: SPACE, h: Mac_FUNCTION}
+  - {t: '&to_layer_0 LANG2', h: Win}
+  - '&Behavior_Kana_ENG'
+  - {t: ENTER, h: '6'}
+  - '&Macro_Mac_NUM'
+  Mac_Num:
+  - F9
+  - KP 7
+  - KP 8
+  - KP 9
+  - '5'
+  - F9
+  - KP 7
+  - {t: KP 8, h: '6'}
+  - KP 9
+  - Sft+-
+  - {t: ▽, type: trans}
+  - KP 4
+  - KP 5
+  - KP 6
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mmv MOVE_UP'
+  - KP SLASH
+  - KP 4
+  - KP 5
+  - KP 6
+  - BACKSPACE
+  - KP 0
+  - KP 1
+  - KP 2
+  - KP 3
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mmv MOVE_DOWN'
+  - KP 0
+  - KP 1
+  - KP 2
+  - KP 3
+  - .
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - SPACE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Mac_FUNCTION:
+  - Gui+Q
+  - Gui+W
+  - Gui+E
+  - Gui+R
+  - Gui+T
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - Gui+A
+  - Gui+S
+  - Gui+D
+  - Gui+F
+  - Gui+G
+  - {t: ▽, type: trans}
+  - F13
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - Gui+Z
+  - Gui+X
+  - Gui+C
+  - Gui+V
+  - Gui+B
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F11
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F12
 combos:
 - p: [39, 38]
   k: {t: ESC, h: BT}
