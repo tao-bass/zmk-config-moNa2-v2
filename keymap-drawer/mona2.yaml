@@ -8,7 +8,7 @@ layers:
   - T
   - Y
   - U
-  - {t: I, h: '6'}
+  - {t: I, h: '8'}
   - O
   - P
   - A
@@ -42,7 +42,7 @@ layers:
   - {t: SPACE, h: arrow}
   - {t: '&to_layer_0 LANG2', h: Win}
   - '&Behavior_Henkan_Muhenkan'
-  - {t: ENTER, h: '6'}
+  - {t: ENTER, h: '8'}
   - '&Macro_Win_NUM'
   Win_Num:
   - F9
@@ -52,7 +52,7 @@ layers:
   - '5'
   - F9
   - KP 7
-  - {t: KP 8, h: '6'}
+  - {t: KP 8, h: '8'}
   - KP 9
   - Sft+-
   - {t: ▽, type: trans}
@@ -140,7 +140,7 @@ layers:
   - T
   - Y
   - U
-  - {t: I, h: '6'}
+  - {t: I, h: '8'}
   - O
   - P
   - A
@@ -174,7 +174,7 @@ layers:
   - {t: SPACE, h: arrow}
   - {t: '&to_layer_0 LANG2', h: Win}
   - '&Behavior_Kana_ENG'
-  - {t: ENTER, h: '6'}
+  - {t: ENTER, h: '8'}
   - '&Macro_Mac_NUM'
   Mac_Num:
   - F9
@@ -184,7 +184,7 @@ layers:
   - '5'
   - F9
   - KP 7
-  - {t: KP 8, h: '6'}
+  - {t: KP 8, h: '8'}
   - KP 9
   - Sft+-
   - {t: ▽, type: trans}
@@ -352,7 +352,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BT CLR ALL
-  '6':
+  '8':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -396,7 +396,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '5':
+  '9':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
