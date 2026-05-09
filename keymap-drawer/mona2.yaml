@@ -8,7 +8,7 @@ layers:
   - T
   - Y
   - U
-  - {t: I, h: '6'}
+  - {t: I, h: Kigou}
   - O
   - P
   - A
@@ -31,19 +31,151 @@ layers:
   - TAB
   - '`'
   - N
-  - {t: M, h: BT}
+  - {t: M, h: Mac_FUNCTION}
   - ','
   - .
   - /
   - LEFT SHIFT
   - LEFT WIN
   - LEFT ALT
-  - {t: BACKSPACE, h: Win_FUNCTION}
-  - {t: SPACE, h: arrow}
+  - {t: BACKSPACE, h: '6'}
+  - {t: SPACE, h: BT}
   - {t: '&to_layer_0 LANG2', h: Win}
   - '&Behavior_Henkan_Muhenkan'
-  - {t: ENTER, h: '6'}
+  - {t: ENTER, h: Kigou}
   - '&Macro_NUM_Muhenkan'
+  Win_FUNCTION:
+  - Ctl+Q
+  - Ctl+W
+  - Ctl+E
+  - Ctl+R
+  - Ctl+T
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - Ctl+A
+  - Ctl+S
+  - Ctl+D
+  - Ctl+F
+  - Ctl+G
+  - {t: ▽, type: trans}
+  - F13
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - Ctl+B
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F11
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F12
+  Mac:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - {t: I, h: Kigou}
+  - O
+  - P
+  - A
+  - S
+  - D
+  - F
+  - G
+  - Sft+Gui+S
+  - F13
+  - H
+  - J
+  - K
+  - L
+  - '-'
+  - {t: Z, h: LEFT CONTROL}
+  - X
+  - C
+  - V
+  - B
+  - TAB
+  - '`'
+  - N
+  - {t: M, h: Mac_FUNCTION}
+  - ','
+  - .
+  - /
+  - LEFT SHIFT
+  - LEFT WIN
+  - LEFT ALT
+  - {t: BACKSPACE, h: '6'}
+  - {t: SPACE, h: BT}
+  - {t: '&to_layer_0 LANG2', h: Win}
+  - '&Behavior_Henkan_Muhenkan'
+  - {t: ENTER, h: Kigou}
+  - '&Macro_NUM_Muhenkan'
+  Mac_FUNCTION:
+  - Gui+Q
+  - Gui+W
+  - Gui+E
+  - Gui+R
+  - Gui+T
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - Gui+A
+  - Gui+S
+  - Gui+D
+  - Gui+F
+  - Gui+G
+  - {t: ▽, type: trans}
+  - F13
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - Gui+Z
+  - Gui+X
+  - Gui+C
+  - Gui+V
+  - Gui+B
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F11
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F12
   Kigou:
   - '!'
   - '@'
@@ -52,7 +184,7 @@ layers:
   - '%'
   - ^
   - '&'
-  - '*'
+  - {t: '*', type: held}
   - '-'
   - _
   - '`'
@@ -96,7 +228,7 @@ layers:
   - '5'
   - F9
   - KP 7
-  - {t: KP 8, h: '6'}
+  - {t: KP 8, h: Kigou}
   - KP 9
   - Sft+-
   - {t: ▽, type: trans}
@@ -163,7 +295,7 @@ layers:
   - {t: ▽, type: trans}
   - '&bootloader'
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BT CLR
@@ -171,7 +303,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -184,7 +316,7 @@ layers:
   - {t: ▽, type: trans}
   - Gui+Ctl+D
   - Sft+Ctl+TAB
-  - {t: UP, type: held}
+  - UP
   - Ctl+TAB
   - Ctl+Gui+F4
   - {t: ▽, type: trans}
@@ -214,7 +346,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -251,7 +383,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: M, h: BT}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -303,57 +435,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Win_FUNCTION:
-  - Ctl+Q
-  - Ctl+W
-  - Ctl+E
-  - Ctl+R
-  - Ctl+T
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - Ctl+A
-  - Ctl+S
-  - Ctl+D
-  - Ctl+F
-  - Ctl+G
-  - {t: ▽, type: trans}
-  - F13
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - Ctl+B
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F11
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F12
 combos:
 - p: [39, 38]
-  k: {t: ESC, h: BT}
+  k: {t: ESC, h: Mac_FUNCTION}
 - p: [11, 12]
   k: TAB
