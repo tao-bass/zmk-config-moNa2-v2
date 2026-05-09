@@ -26,7 +26,7 @@
         compatible = "zmk,combos";
 
         layer4_ESC {
-            bindings = <&lt 3 ESC>;
+            bindings = <&lt 7 ESC>;
             key-positions = <39 38>;
         };
 
@@ -44,25 +44,46 @@
             label = "TO_LAYER_0";
         };
 
-        Macro_Win_layer_Henkan: Macro_Win_layer_Henkan {
+        Macro_Win_Henkan: Macro_Win_layer_Henkan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 0 &kp INT4>;
             label = "MACRO_WIN_LAYER_HENKAN";
         };
 
-        Macro_Win_layer_Muhenkan: Macro_Win_layer_Muhenkan {
+        Macro_Win_Muhenkan: Macro_Win_layer_Muhenkan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 0 &kp INT5>;
             label = "MACRO_WIN_LAYER_MUHENKAN";
         };
 
-        Macro_NUM_Muhenkan: Macro_NUM_Muhenkan {
+        Macro_Win_NUM: Macro_NUM_Muhenkan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &kp INT5>;
+            bindings = <&to 1 &kp INT5>;
             label = "MACRO_NUM_MUHENKAN";
+        };
+
+        Macro_Mac_Kana: Macro_Mac_Kana {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 3 &kp LANG_HANGEUL>;
+            label = "MACRO_MAC_KANA";
+        };
+
+        Macro_Mac_Eng: Macro_Mac_Eng {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 3 &kp LANG2>;
+            label = "MACRO_MAC_ENG";
+        };
+
+        Macro_Mac_NUM: Macro_Mac_NUM {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 4 &kp LANG2>;
+            label = "MACRO_MAC_NUM";
         };
     };
 
@@ -96,7 +117,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BEHAVIOR_HENKAN_MUHENKAN";
             #binding-cells = <0>;
-            bindings = <&Macro_Win_layer_Henkan>, <&Macro_Win_layer_Muhenkan>;
+            bindings = <&Macro_Win_Henkan>, <&Macro_Win_Muhenkan>;
+        };
+
+        Behavior_Kana_ENG: Behavior_Kana_ENG {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BEHAVIOR_KANA_ENG";
+            #binding-cells = <0>;
+            bindings = <&Macro_Mac_Kana>, <&Macro_Win_Muhenkan>;
         };
     };
 
@@ -105,13 +133,64 @@
 
         Win_layer {
             bindings = <
-&kp Q               &kp W         &kp E         &kp R            &kp T                                                               &kp Y        &kp U    &lt 4 I    &kp O    &kp P
-&kp A               &kp S         &kp D         &kp F            &kp G        &kp LS(LG(S))               &kp F13                    &kp H        &kp J    &kp K      &kp L    &kp MINUS
-&mt LEFT_CONTROL Z  &kp X         &kp C         &kp V            &kp B        &kp TAB                     &kp GRAVE                  &kp N        &lt 3 M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LEFT_SHIFT      &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 BACKSPACE  &lt 6 SPACE  &lt_to_layer_0 0 LANG2      &Behavior_Henkan_Muhenkan  &lt 4 ENTER                               &Macro_NUM_Muhenkan
+&kp Q               &kp W         &kp E         &kp R            &kp T                                                                &kp Y        &kp U    &lt 8 I    &kp O    &kp P
+&kp A               &kp S         &kp D         &kp F            &kp G         &kp LS(LG(S))               &kp F13                    &kp H        &kp J    &kp K      &kp L    &kp MINUS
+&mt LEFT_CONTROL Z  &kp X         &kp C         &kp V            &kp B         &kp TAB                     &kp GRAVE                  &kp N        &lt 7 M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LEFT_SHIFT      &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 BACKSPACE  &lt 10 SPACE  &lt_to_layer_0 0 LANG2      &Behavior_Henkan_Muhenkan  &lt 8 ENTER                               &Macro_Win_NUM
             >;
 
             sensor-bindings = <&scroll_up_down>;
+        };
+
+        Win_Num {
+            bindings = <
+&kp F9           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp NUMBER_5                              &kp F9           &kp KP_NUMBER_7  &lt 8 KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(MINUS)
+&trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans        &trans      &mmv MOVE_UP    &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp BACKSPACE
+&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans        &trans      &mmv MOVE_DOWN  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2    &kp KP_NUMBER_3  &kp PERIOD
+&trans           &trans           &trans           &trans           &kp SPACE     &trans      &trans          &trans                                                                &trans
+            >;
+
+            sensor-bindings = <&scroll_right_left>;
+        };
+
+        Win_FUNCTION {
+            bindings = <
+&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
+&trans     &trans     &trans     &trans     &trans     &trans      &trans   &trans                          &kp F12
+            >;
+        };
+
+        Mac_layer {
+            bindings = <
+&kp Q               &kp W         &kp E         &kp R            &kp T                                                         &kp Y        &kp U    &lt 8 I    &kp O    &kp P
+&kp A               &kp S         &kp D         &kp F            &kp G         &kp LS(LG(S))               &kp F13             &kp H        &kp J    &kp K      &kp L    &kp MINUS
+&mt LEFT_CONTROL Z  &kp X         &kp C         &kp V            &kp B         &kp TAB                     &kp GRAVE           &kp N        &lt 7 M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LEFT_SHIFT      &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 BACKSPACE  &lt 10 SPACE  &lt_to_layer_0 0 LANG2      &Behavior_Kana_ENG  &lt 8 ENTER                               &Macro_Mac_NUM
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
+        };
+
+        Mac_Num {
+            bindings = <
+&kp F9           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp NUMBER_5                              &kp F9           &kp KP_NUMBER_7  &lt 8 KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(MINUS)
+&trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans        &trans      &mmv MOVE_UP    &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp BACKSPACE
+&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans        &trans      &mmv MOVE_DOWN  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2    &kp KP_NUMBER_3  &kp PERIOD
+&trans           &trans           &trans           &trans           &kp SPACE     &trans      &trans          &trans                                                                &trans
+            >;
+
+            sensor-bindings = <&scroll_right_left>;
+        };
+
+        Mac_FUNCTION {
+            bindings = <
+&kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
+&trans     &trans     &trans     &trans     &trans     &trans      &trans   &trans                          &kp F12
+            >;
         };
 
         Kigou {
@@ -125,24 +204,13 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        Num {
-            bindings = <
-&kp F9           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp NUMBER_5                              &kp F9           &kp KP_NUMBER_7  &lt 4 KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(MINUS)
-&trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans        &trans      &mmv MOVE_UP    &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp BACKSPACE
-&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans        &trans      &mmv MOVE_DOWN  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2    &kp KP_NUMBER_3  &kp PERIOD
-&trans           &trans           &trans           &trans           &kp SPACE     &trans      &trans          &trans                                                                &trans
-            >;
-
-            sensor-bindings = <&scroll_right_left>;
-        };
-
         BT {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &studio_unlock &trans        &trans        &trans        &out OUT_TOG
-&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans         &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                   &bt BT_CLR_ALL
-            >; 
+&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &studio_unlock  &trans        &trans        &trans        &out OUT_TOG
+&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans          &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                    &bt BT_CLR_ALL
+            >;
 
             sensor-bindings = <&scroll_up_down>;
         };
@@ -162,7 +230,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &trans  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &lt 3 M   &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &lt 7 M   &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
 
@@ -178,15 +246,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
-        };
-
-        Win_FUNCTION {
-            bindings = <
-&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans     &trans     &trans     &trans     &trans     &trans      &trans   &trans                          &kp F12
-            >;
         };
     };
 };
