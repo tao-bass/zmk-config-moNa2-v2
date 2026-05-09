@@ -43,7 +43,7 @@ layers:
   - {t: '&to_layer_0 LANG2', h: Win}
   - '&Behavior_Henkan_Muhenkan'
   - {t: ENTER, h: '6'}
-  - '&Macro_NUM_Muhenkan'
+  - '&Macro_Win_NUM'
   Kigou:
   - '!'
   - '@'
