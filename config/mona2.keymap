@@ -61,24 +61,9 @@
         Macro_NUM_Muhenkan: Macro_NUM_Muhenkan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 6 &kp INT5>;
+            bindings = <&to 2 &kp INT5>;
             label = "MACRO_NUM_MUHENKAN";
         };
-
-        Macro_Mac_layer_Kana: Macro_Mac_layer_Kana {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 2 &kp INT2>;
-            label = "Macro_Mac_layer_Kana";
-        };
-
-        Macro_Mac_layer_Eng: Macro_Mac_layer_Eng {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 2 &kp INT1>;
-            label = "Macro_Mac_layer_Eng";
-        };
-
     };
 
     behaviors {
@@ -113,13 +98,6 @@
             #binding-cells = <0>;
             bindings = <&Macro_Win_layer_Henkan>, <&Macro_Win_layer_Muhenkan>;
         };
-
-        Behavior_Kana_Eng: Behavior_Kana_Eng {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Behavior_Kana_Eng";
-            #binding-cells = <0>;
-            bindings = <Macro_Mac_layer_Kana>, <Macro_Mac_layer_Eng>;
-        };
     };
 
     keymap {
@@ -134,35 +112,6 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
-        };
-
-        Win_FUNCTION {
-            bindings = <
-&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans     &trans     &trans     &trans     &trans     &trans      &trans   &trans                          &kp F12
-            >;
-        };
-
-        Mac_layer {
-            bindings = <
-&kp Q               &kp W         &kp E         &kp R            &kp T                                                               &kp Y        &kp U    &lt 4 I    &kp O    &kp P
-&kp A               &kp S         &kp D         &kp F            &kp G        &kp LS(LG(S))               &kp F13                    &kp H        &kp J    &kp K      &kp L    &kp MINUS
-&mt LEFT_CONTROL Z  &kp X         &kp C         &kp V            &kp B        &kp TAB                     &kp GRAVE                  &kp N        &lt 3 M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LEFT_SHIFT      &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 BACKSPACE  &lt 6 SPACE  &lt_to_layer_0 0 LANG2      &Behavior_Henkan_Muhenkan  &lt 4 ENTER                               &Macro_NUM_Muhenkan
-            >;
-
-            sensor-bindings = <&scroll_up_down>;
-        };
-
-        Mac_FUNCTION {
-            bindings = <
-&kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans     &trans     &trans     &trans     &trans     &trans      &trans   &trans                          &kp F12
-            >;
         };
 
         Kigou {
@@ -213,7 +162,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &trans  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &lt 3 M   &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
 
@@ -231,8 +180,13 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-
-
-
+        Win_FUNCTION {
+            bindings = <
+&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
+&trans     &trans     &trans     &trans     &trans     &trans      &trans   &trans                          &kp F12
+            >;
+        };
     };
 };
