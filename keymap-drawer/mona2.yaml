@@ -16,12 +16,12 @@ layers:
   - D
   - F
   - G
-  - '-'
+  - {t: ;, h: MOUSE_W}
   - H
   - J
   - K
   - L
-  - {t: ;, h: MOUSE_W}
+  - '-'
   - {t: Z, h: LEFT SHIFT}
   - X
   - C
@@ -37,11 +37,11 @@ layers:
   - RCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: '`', h: NUM_W}
+  - {t: BACKSPACE, h: NUM_W}
   - {t: SPACE, h: MOUSE_W}
   - {t: '-', h: SCRL_W}
+  - {t: '`', h: NUM_W}
   - ENTER
-  - BACKSPACE
   - RIGHT SHIFT
   MAC:
   - Q
@@ -188,12 +188,12 @@ layers:
   - '&screenshot'
   - RIGHT ARROW
   - '*'
-  - _
+  - {t: _, type: held}
   - '!'
   - '&mkp MB1'
   - SCRL_W
   - '&mkp MB2'
-  - {t: '&henkan', type: held}
+  - '&henkan'
   - {t: KP 0, h: LEFT SHIFT}
   - Ctl+Y
   - DOWN ARROW
