@@ -16,12 +16,12 @@ layers:
   - D
   - F
   - G
-  - '-'
+  - ':'
   - H
   - J
   - K
   - L
-  - {t: ;, h: MOUSE_W}
+  - {t: '-', h: MOUSE_W}
   - {t: Z, h: LEFT SHIFT}
   - X
   - C
@@ -37,12 +37,12 @@ layers:
   - RCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: '`', h: NUM_W}
+  - {t: BACKSPACE, h: NUM_W}
   - {t: SPACE, h: MOUSE_W}
   - {t: '-', h: SCRL_W}
   - ENTER
-  - BACKSPACE
-  - RIGHT SHIFT
+  - {t: ENTER, h: SCRL_W}
+  - {t: NUM_W, h: toggle}
   MAC:
   - Q
   - W
@@ -64,7 +64,7 @@ layers:
   - J
   - K
   - L
-  - {t: ;, h: MOUSE_W}
+  - {t: '-', h: MOUSE_W}
   - {t: Z, h: LEFT SHIFT}
   - X
   - C
@@ -80,11 +80,11 @@ layers:
   - LEFT GUI
   - LEFT WIN
   - LEFT ALT
-  - {t: '`', h: NUM_M}
+  - {t: BACKSPACE, h: NUM_M}
   - {t: SPACE, h: MOUSE_M}
   - {t: '-', h: SCRL_M}
   - ENTER
-  - BACKSPACE
+  - {t: ENTER, h: SCRL_M}
   - RIGHT SHIFT
   NUM_W:
   - ESCAPE
